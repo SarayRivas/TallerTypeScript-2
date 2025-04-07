@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TV Series</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <style>
+    body {
+      background-color: #f8f9fa;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .page-header {
+      background-color: #20a0b3;
+      color: rgb(0, 0, 0);
+      padding: 15px 30px;
+      font-size: 1.8rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      width: 100%;
+    }
+
+    .card {
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      border: none;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    table {
+      border-radius: 0 0 12px 12px;
+      overflow: hidden;
+    }
+
+    tfoot td {
+      font-weight: bold;
+      background-color: #e9ecef;
+    }
+
+    .card img {
+      height: 200px;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+  <div class="page-header">
+    <img src="https://img.icons8.com/ios-filled/24/000000/tv.png" alt="TV Icon" />
+    <span class="fw-bold">TV Series</span>
+  </div>
+
+  <div class="container mt-5">
+    <div class="row">
+      
+      <!-- Columna de la tabla -->
+      <div class="col-md-8">
+        <div class="card">
+          <div class="table-responsive">
+            <table class="table table-hover align-middle mb-0">
+              <thead class="table-light">
+                <tr>
+                  <th>#</th>
+                  <th>Name</th>
+                  <th>Channel</th>
+                  <th>Seasons</th>
+                </tr>
+              </thead>
+              <tbody id="series"></tbody>
+              <tfoot id="footTable"></tfoot>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Columna para el detalle -->
+      <div class="col-md-4">
+        <div id="detail"></div>
+      </div>
+
+    </div>
+  </div>
+
+  <script type="module" src="./scripts/main.js"></script>
+</body>
+</html>
+
